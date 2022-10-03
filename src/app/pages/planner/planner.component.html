@@ -1,0 +1,23 @@
+<section class="planner-section">
+  <h1 class="planner-title">Plan your day!</h1>
+  <div class="planner-container">
+    <div class="planner">
+      <div class="planner-actions">
+        <input
+          [(ngModel)]="inputValue"
+          placeholder="New task..."
+          class="task-input"
+          type="text" />
+        <button (click)="addTask()" class="btn-add">Add</button>
+      </div>
+      <div class="task-container">
+        <div *ngFor="let task of plannerTasks">
+          <input [(ngModel)]="task.done" type="checkbox" />
+          <span>{{ task.description }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ plannerTasks | json }}
+  <p>{{ inputValue }}</p>
+</section>

@@ -1,0 +1,50 @@
+.planner-section {
+  background-color: #f0f8ea;
+  min-height: 100vh;
+}
+
+.planner-title {
+  text-align: center;
+}
+
+.planner-container {
+  display: flex;
+  justify-content: center;
+}
+
+.planner {
+  display: flex;
+  flex-direction: column;
+  background-color: #a8c686;
+  padding: 20px;
+  width: 400px;
+  margin: 0 20px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.planner-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.task-input {
+  width: 100%;
+}
+
+.btn-add {
+  border: none;
+  border-radius: 4px;
+  background-color: #e4572e;
+  color: white;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+}

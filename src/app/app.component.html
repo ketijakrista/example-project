@@ -1,2 +1,32 @@
-<h1>{{ title }}</h1>
-<router-outlet></router-outlet>
+<!-- <h1 class="title" [title]="title">{{ title }}</h1>
+<h2>Pauze būs 19:00</h2>
+<h3>{{ title }} Pauze būs 19:00</h3>
+<h2>{{ title + " " + "Pauze būs 19:00" }}</h2>
+<h1>{{ hello() }}</h1>
+
+<button (click)="sayHello()">Click me</button>
+
+<p>{{ description }}</p>
+
+<button (click)="toggleVisibility()">Toggle visibility</button>
+
+<p *ngIf="isVisible; else elseBlock">When true</p>
+<p *ngIf="!isVisible">When false</p>
+
+<ng-template #elseBlock>
+  <p *ngIf="!isVisible">When false</p>
+</ng-template>
+
+<div>
+  {{ catNames }}
+</div>
+
+<div>
+  <span *ngFor="let name of catNames">{{ name }}</span>
+</div>
+
+<div *ngFor="let cat of cats">
+  <p>{{ cat.name }} {{ cat.age }}</p>
+  <p>{{ cat["appearance"]["color"] }}</p>
+</div> -->
+<app-planner></app-planner>
