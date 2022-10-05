@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+  background-color: #56A3A6;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 480px) {
+  .header {
+    justify-content: flex-end;
+  }
+}
+
+.header-link {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.active {
+  color: deeppink;
+  border-bottom: 1px solid deeppink;
+}

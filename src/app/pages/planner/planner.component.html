@@ -4,6 +4,7 @@
     <div class="planner">
       <div class="planner-actions">
         <input
+          (keydown.enter)="addTask()"
           [(ngModel)]="inputValue"
           placeholder="New task..."
           class="task-input"
@@ -11,13 +12,22 @@
         <button (click)="addTask()" class="btn-add">Add</button>
       </div>
       <div class="task-container">
-        <div *ngFor="let task of plannerTasks">
-          <input [(ngModel)]="task.done" type="checkbox" />
-          <span>{{ task.description }}</span>
+        <div class="task" *ngFor="let task of plannerTasks; let i = index">
+          <div class="task-left">
+            <input
+              class="checkbox-done"
+              [(ngModel)]="task.done"
+              type="checkbox" />
+            <span [ngClass]="{ done: task.done }">{{ task.description }}</span>
+          </div>
+          <button class="btn-delete" (click)="deleteTask(i)">
+            <img src="/assets/images/icons/icon-clear.svg" alt="" />
+          </button>
         </div>
+      </div>
+      <div>
+        You have completed {{ tasksDoneCount }} out of {{ plannerTasks.length }}
       </div>
     </div>
   </div>
-  {{ plannerTasks | json }}
-  <p>{{ inputValue }}</p>
 </section>

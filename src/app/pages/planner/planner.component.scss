@@ -21,6 +21,7 @@
   margin: 0 20px;
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  gap: 10px;
 }
 
 .planner-actions {
@@ -47,4 +48,48 @@
   &:hover {
     opacity: 1;
   }
+}
+
+.task-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f8ea;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.btn-delete {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  opacity: 1;
+
+  img {
+    filter: invert(39%) sepia(92%) saturate(713%) hue-rotate(322deg)
+      brightness(89%) contrast(91%);
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.checkbox-done {
+  width: 20px;
+  height: 20px;
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
 }
